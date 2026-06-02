@@ -48,10 +48,23 @@
 
 // To add the pen info in js 
 
-const pen={
-    name:'Pilot pen',
-    penRating:"3 star",
-    Price:100,
-    offer:"20% off"
-}
-console.log(pen);
+// const pen={
+//     name:'Pilot pen',
+//     penRating:"3 star",
+//     Price:100,
+//     offer:"20% off"
+// }
+// console.log(pen);
+
+// const instagramProfile={
+//     userName:'animes',
+//     followers:400,
+//     following:300,
+//     isfollwing:true,
+//     bioDescription:'lazy but hard working',
+// };
+
+
+// Operators in js 
+// 
+

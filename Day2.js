@@ -55,6 +55,7 @@
 // console.log('',color);
 
 
+// 2. if else statements
 // let mode='bright';
 // let color;
 // if(mode=='light'){
@@ -71,7 +72,7 @@
 //     console.log(a,"is odd number");
 // }
 
-
+// 3. if elseif statements
 // let a=10;
 // let b=20;
 // let c=2;
@@ -84,14 +85,13 @@
 //     console.log(c,'is greatest number');
 // }
 
-let mode='';
-let color;
-
-if(mode=='light'){
-    color='white';
-}else if (mode=='dark'){
-    color='black';
-}else{
-    color="blue";
-}
-console.log(color,'mode is selected');
+// let mode="";
+// let color;
+// if(mode=="dark"){
+//     color="black";
+// }else if (mode=="bright"){
+//     color="white";
+// }else{
+//     color="gray";
+// }
+// console.log(color);
