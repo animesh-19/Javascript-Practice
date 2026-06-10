@@ -1,37 +1,37 @@
-// //super keyword 
+//super keyword 
 
-// class Animal{
-//     constructor(name,age){
-//         this.name=name;
-//         this.age=age;
-//     }
+class Animal{
+    constructor(name,age){
+        this.name=name;
+        this.age=age;
+    }
 
-//     move(speed){
-//         console.log(`${this.name} can run at ${speed} km per hour`);
-//     }
-// }
+    move(speed){
+        console.log(`${this.name} can run at ${speed} km per hour`);
+    }
+}
 
-// class  Dog extends Animal{
-//     constructor(name,age,barks){
-//         super(name,age);
-//         this.barks=barks;
-//     }
-//     run(){
-//         super.move(this.barks);
-//         console.log(`${this.name} can bark at ${this.barks} km per hour`);
-//     }
-// }
+class  Dog extends Animal{
+    constructor(name,age,barks){
+        super(name,age);
+        this.barks=barks;
+    }
+    run(){
+        super.move(this.barks);
+        console.log(`${this.name} can bark at ${this.barks} km per hour`);
+    }
+}
 
-// class Cat extends Animal{
-//     constructor(name,age,meows){
-//         super(name,age);
-//         this.meows=meows;
-//     }
-//     run(){
-//         super.move(this.meows);
-//         console.log(`${this.name} can meow at ${this.meows} km per hr`);
-//     }
-// }
+class Cat extends Animal{
+    constructor(name,age,meows){
+        super(name,age);
+        this.meows=meows;
+    }
+    run(){
+        super.move(this.meows);
+        console.log(`${this.name} can meow at ${this.meows} km per hr`);
+    }
+}
 
 // const dog1=new Dog('Kitty',3,22);
 // const cat1=new Cat('Bella',2,15);
@@ -246,9 +246,47 @@ const fruits=[{'name':'Apple','color':'Red','cal':88},
              {'name':'Banana','color':'Yellow','cal':105}, 
              {'name':'Orange','color':'Orange','cal':62}]
 
-             
+
 
 fruits[0].names
 console.log(fruits[0].name);
+// for each loop 
+fruits.forEach(fruit=>console.log(fruit.name))
+
+//map 
+const fruitsNames=fruits.map(fruit=>fruit.name);
+console.log(fruitsNames);
 
 
+
+
+function employee(name){
+    console.log(`hello its me ${name}`)
+}
+employee('Animesh')
+
+
+let num=[15,15,45,78,90,15,24,45,78,90]
+let newNum=[...num]
+console.log(newNum)
+
+let  maximum=Math.max(...num)
+console.log(maximum)
+
+function food(...foodItems){
+    return foodItems;
+}
+const newFooods=food('pizza','burger','pasta','noodels')
+console.log(newFooods)
+
+
+let mark=[70,45,67,89,867,5657];
+
+marks.forEach(square)
+
+function square(element,index,array){
+    array[index]=Math.pow(element,2);
+    console.log(marks)
+
+    class rectangle
+}

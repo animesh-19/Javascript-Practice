@@ -147,7 +147,6 @@ let total=number.reduce(sum);
 let maximmum=number.reduce(max);
 
 
-
 function sum(total,element){
     return total+element;
 }
@@ -204,5 +203,6 @@ const app=(name,age,city)=>{
     console.log('My names is ${name} and I am ${age} years old and i have been reading in ${kathmandu}')
 }
 app('animesh',5,'kathmandu');
+
 
 
