@@ -30,11 +30,9 @@ console.log( sports.length);
 
 
 //indexing the items of the array using loop
-
 for(let i=0;i<sports.length;i++){
     console.log(sports[i])
 }
-
 
 for(sport of sports){
     console.log(sport);
@@ -49,14 +47,12 @@ for(sport of sports.reverse()){
 //spread operator 
 let  marks=[70,45,67,89,867,5657];
 let newMarks=[...marks];
-console.log(newMarks);
-
+console.log(newMarks); 
 let maximum=Math.max(...marks);
 console.log(maximum);
 
 let minimum=Math.min(...marks)
 console.log(minimum);
-
 
 let fruits=['apple','banana','orange'];
 let newFruits=[...fruits];
@@ -69,7 +65,6 @@ let grocery=[...fruit,...vegs];
 console.log(grocery);
 
 
-
 let username='anmesh pyakurel';
 let newusername=[...username]
 
@@ -78,7 +73,7 @@ console.log(newusername.join('-'));
 
 
 ///rest parameter 
-// ueed to combine the individual items and keep them in array or group together
+// used to combine the individual items and keep them in array or group together
 
 function store(...foods){
     console.log(foods);
@@ -132,19 +127,22 @@ const fullName=combineString('my','name','is','animesh','pyakurel','.');
 console.log(fullName);
 
 
+let numbers=[10,20,30,40,50]
+function sum(...numbers){
+    let result=0;
+    for (let el of numbers){
+        result+=el;
+    }
+    console.log('The sum is:',result);
+
+}
+
+
 
 
 function hello(callback){
     console.log('hello to the world of functions');
     callback();
-}
-
-function goodbye(){
-    console.log('goodby to the worldof functions')
-}
-
-function mad(){
-    console.log('I am mad!');
 }
  function sad(){
     console.log('I am sad today ');
