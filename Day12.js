@@ -1,13 +1,13 @@
 
-// console.log(document);
-// console.dir(document);
-// console.log(document.domain);
-// console.log(document.URL);
+console.log(document);
+console.dir(document);
+console.log(document.domain);
+console.log(document.URL);
 
-// document.title='My website';
-// console.log(document.title);
+document.title='My website';
+console.log(document.title);
 
-// document.body.style.backgroundColor='red';
+document.body.style.backgroundColor='red';
 
 const userName='Animesh.Pyakurel';
 const pageContent=document.getElementById('page-content');
