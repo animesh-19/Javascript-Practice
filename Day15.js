@@ -78,33 +78,87 @@
 // 2.clean kitechen 
 // 2.takeout trash 
 
-function walkDog(){
-    return new Promise((resolve)=>{
+function cleanRoom(){
+    return new Promise((resolve,reject)=>{
+      setTimeout(()=>{
+        resolve('Room is cleaned');
+    },1500);
+    })
+
+}
+function cleanKitchen(){
+    return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log('Dog is walked');
-            resolve('Dog walked');
+            resolve('Kitchen is cleaned');
+        },2000);
+    })
+}
+function takeOutTrash(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            resolve('Trash is taken out')
+        },1500)
+    })
+}
+
+cleanRoom().then((result)=>{console.log(result);
+    return cleanKitchen();
+}).then((result)=>{console.log(result);
+    return takeOutTrash();
+}).then((result)=>{
+    console.log(result);
+});
+
+
+
+function walkDog(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            const  dogWalked=true;
+        
+        if(dogWalked){
+            resolve('Dog is walked');
+        } 
+        else {
+            reject('Failed to walk dog');
+        }
         },1500);
     });
 }
-function cleanRoom(){
-    return new Promise((resolve)=>{
+
+function cleanKitchen(){
+    return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            console.log('Kitchen is Cleaned');
-            resolve('Kitchen cleaned');
-        },3000);
-    });
-}
-function takeOutTrash(){
-    return new Promise((resolve)=>{
-        setTimeout(()=>{
-            console.log('Trash is Taken out');
-            resolve('Trash taken out');
-        },1000);
+
+            const cleanKitchen=true;
+            if(cleanKitchen){
+                resolve('kitchen is cleaned');
+            }
+            else {
+                reject('Failed to clean kitchen');
+            }
+        },2000);
     });
 }
 
-walkDog()
-    .then(()=> cleanRoom())
-    .then(()=> takeOutTrash())
-    .then(()=> console.log('All task completed'))
-    .catch(err => console.error(err));
+function takeOutTrash(){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+
+            const takeOutTrash=true;
+            if(takeOutTrash){
+                resolve('Trash is taken out ');
+            }
+            else {
+                reject('Failed to take out trash');
+            }
+        },2000);
+    });
+}
+walkDog().then((result)=>{
+    console.log(result);
+    return cleanKitchen().then((result)=>{
+        console.log(result);
+        return takeOutTrash();
+    });
+});
