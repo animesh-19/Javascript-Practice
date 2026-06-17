@@ -65,3 +65,6 @@ allFruits.forEach(ele=>{
     ele.style.fontSize='24px';
 })
 
+// Dom navigation 
+// The process of navigating through the structure of an html document
+
